@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#069</color>
+    <color name="white">#fff</color>
+    <color name="login_bg">#ffd61a</color>
+    <color name="sign_bg">#4fe3ff</color>
+    <color name="red">#ff200d</color>
+</resources>
