@@ -7,8 +7,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/type"
+        android:id="@+id/model"
         android:gravity="center"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
+        android:paddingBottom="10dp"
+        android:background="@color/sign_bg"
+        android:textColor="#000" />
 </LinearLayout>

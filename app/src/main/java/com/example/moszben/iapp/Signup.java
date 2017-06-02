@@ -16,31 +16,23 @@ import Models.Client;
 
 public class Signup extends AppCompatActivity {
 
-    Spinner spinner;
-    SpinnerAdapter adapter;
-    List<Client> types;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        //init
-        String type []=getResources().getStringArray(R.array.type);
-        types=new ArrayList<Client>();
-        Client client1=new Client(type[0]);
-        types.add(client1);
-        Client client2=new Client(type[1]);
-        types.add(client2);
-        spinner=(Spinner)findViewById(R.id.spinner);
-        adapter=new SpinnerAdapter(this,R.layout.spinner_item,types);
-        adapter.setDropDownViewResource(R.layout.spinner_item);
-        spinner.setAdapter(adapter);
     }
 
     public void onLogin(View v)
     {
         Intent i=new Intent(getApplication(),LoginAct.class);
+        finish();
+        startActivity(i);
+    }
+
+    public void onConfirm(View v)
+    {
+        Intent i=new Intent(getApplication(),Signup2.class);
         finish();
         startActivity(i);
     }

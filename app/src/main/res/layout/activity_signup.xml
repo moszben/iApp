@@ -19,15 +19,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/etape1"
+                android:id="@+id/etape1"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/name_wrap"
                 android:layout_marginTop="20dp"
                 android:paddingTop="20dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
+                android:layout_below="@id/etape1">
 
             <EditText
                 android:layout_width="match_parent"
@@ -61,7 +70,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/age_wrap"
+                android:id="@+id/suser_wrap"
                 android:layout_marginTop="20dp"
                 android:paddingTop="20dp"
                 android:layout_below="@id/fname_wrap">
@@ -69,29 +78,59 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/age"
-                android:inputType="number"
+                android:hint="@string/user"
+                android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/age" />
+                android:id="@+id/suser" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <Spinner
-                android:layout_width="wrap_content"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner"
-                android:layout_marginTop="30dp"
-                android:layout_below="@+id/age_wrap"/>
+                android:id="@+id/spass_wrap"
+                android:layout_marginTop="20dp"
+                android:paddingTop="20dp"
+                android:layout_below="@id/suser_wrap">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/pass"
+                android:ems="10"
+                android:id="@+id/spass"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirm_pass_wrap"
+                android:layout_marginTop="20dp"
+                android:paddingTop="20dp"
+                android:layout_below="@id/spass_wrap">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirmpass"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/confirm_pass"/>
+
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/signup"
-                android:id="@+id/signup"
+                android:text="@string/confirmer"
+                android:id="@+id/confirm"
                 android:layout_marginTop="50dp"
-                android:layout_below="@+id/spinner"
                 android:layout_centerHorizontal="true"
-                android:background="@color/red" />
+                android:background="@color/red"
+                android:layout_below="@+id/confirm_pass_wrap"
+                android:onClick="onConfirm" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,7 +141,7 @@
                 android:id="@+id/log"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_below="@+id/signup"
+                android:layout_below="@+id/confirm"
                 android:layout_centerHorizontal="true"
                 android:onClick="onLogin" />
 
