@@ -43,7 +43,7 @@ public class SpinnerAdapter extends ArrayAdapter<Client> {
         }
 
         Client current=clients.get(position);
-        TextView type = (TextView) convertView.findViewById(R.id.type);
+        TextView type = (TextView) convertView.findViewById(R.id.model);
 
         type.setText(current.getType());
         return convertView;
